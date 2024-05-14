@@ -16,7 +16,7 @@ const Signup = () => {
             <Text className="font-bold text-secondary text-lg">
               Welcome ...
             </Text>
-            <Text className="text-third">Please fill in the information</Text>
+            <Text className="text-third">Please fill in the information.</Text>
           </View>
           <View className="flex flex-col gap-2 w-full">
             <View className="border w-full h-[50px] rounded-md border-third"></View>
