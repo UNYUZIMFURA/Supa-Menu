@@ -1,6 +1,4 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Stack } from "expo";
+import { Stack } from "expo-router";
 
 const RootLayout = () => {
   return (
@@ -11,10 +9,14 @@ const RootLayout = () => {
           headerShown: false,
         }}
       ></Stack.Screen>
+      <Stack.Screen
+        name="(auth)"
+        options={{
+          headerShown: false,
+        }}
+      ></Stack.Screen>
     </Stack>
   );
 };
 
 export default RootLayout;
-
-const styles = StyleSheet.create({});
