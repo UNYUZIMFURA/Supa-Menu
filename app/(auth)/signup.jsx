@@ -1,9 +1,16 @@
 import CustomButton from "../../components/CustomButton";
-import { SafeAreaView, ScrollView, Text, View, TextInput, TouchableOpacity } from "react-native";
+import { router } from "expo-router";
+import {
+  SafeAreaView,
+  ScrollView,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { router } from "expo-router";
 
 const Signup = () => {
   return (
@@ -65,7 +72,10 @@ const Signup = () => {
             If you have a PMG account,
           </Text>
           <View className="flex w-full items-center py-4">
-            <CustomButton content="Sign In" />
+            <CustomButton
+              handlePress={() => router.push("/login")}
+              content="Sign In"
+            />
             <Text className="text-third mt-2">
               Don't have an account?{" "}
               <Text className="text-primary font-bold">Register</Text>
