@@ -1,8 +1,9 @@
-import { SafeAreaView, ScrollView, Text, View, TextInput } from "react-native";
+import CustomButton from "../../components/CustomButton";
+import { SafeAreaView, ScrollView, Text, View, TextInput, TouchableOpacity } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import CustomButton from "../../components/CustomButton";
+import { router } from "expo-router";
 
 const Signup = () => {
   return (
@@ -13,9 +14,16 @@ const Signup = () => {
         }}
       >
         <View className="h-full bg-white w-full rounded-t-[25px] flex items-center px-5 py-6">
-          <Text className="text-4xl font-bold">
-            Supa<Text className="text-primary">Menu</Text>
-          </Text>
+          <TouchableOpacity
+            onPress={() => {
+              router.push("/");
+            }}
+          >
+            <Text className="text-4xl font-bold">
+              Supa
+              <Text className="text-primary">Menu</Text>
+            </Text>
+          </TouchableOpacity>
           <View className="flex flex-col items-center gap-2 py-5">
             <Text className="font-bold text-secondary text-lg">
               Welcome ...
@@ -50,13 +58,18 @@ const Signup = () => {
             </View>
           </View>
           <View className="flex w-full items-center py-4">
-            <CustomButton content="Proceed"/>
+            <CustomButton content="Proceed" />
             <Text className="text-third font-bold mt-2">OR</Text>
           </View>
-          <Text className="text-third py-1 font-bold">If you have a PMG account,</Text>
+          <Text className="text-third py-1 font-bold">
+            If you have a PMG account,
+          </Text>
           <View className="flex w-full items-center py-4">
-            <CustomButton content="Sign In"/>
-            <Text className="text-third mt-2">Don't have an account? <Text className="text-primary font-bold">Register</Text></Text>
+            <CustomButton content="Sign In" />
+            <Text className="text-third mt-2">
+              Don't have an account?{" "}
+              <Text className="text-primary font-bold">Register</Text>
+            </Text>
           </View>
         </View>
       </ScrollView>
