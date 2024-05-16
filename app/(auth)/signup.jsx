@@ -66,20 +66,16 @@ const Signup = () => {
           </View>
           <View className="flex w-full items-center py-4">
             <CustomButton content="Proceed" />
-            <Text className="text-third font-bold mt-2">OR</Text>
           </View>
+          <Text className="text-third font-bold mt-4">OR</Text>
           <Text className="text-third py-1 font-bold">
-            If you have a PMG account,
+            Already have an account?
           </Text>
           <View className="flex w-full items-center py-4">
             <CustomButton
               handlePress={() => router.push("/login")}
               content="Sign In"
             />
-            <Text className="text-third mt-2">
-              Don't have an account?{" "}
-              <Text className="text-primary font-bold">Register</Text>
-            </Text>
           </View>
         </View>
       </ScrollView>

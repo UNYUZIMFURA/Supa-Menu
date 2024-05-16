@@ -1,5 +1,5 @@
 import CustomButton from "../../components/CustomButton";
-import { router } from "expo-router";
+import { router, Link } from "expo-router";
 import {
   SafeAreaView,
   ScrollView,
@@ -7,10 +7,13 @@ import {
   View,
   TextInput,
   TouchableOpacity,
+  Image
 } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
-import { FontAwesome5 } from "@expo/vector-icons";
+import facebookImg from "../../assets/images/facebook.png"
+import googleImg from "../../assets/images/google.png"
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
 
 const Login = () => {
   return (
@@ -50,12 +53,50 @@ const Login = () => {
               />
             </View>
             <View className="flex flex-row items-center mt-2 justify-between border w-full h-[50px] rounded-md border-third overflow-hidden py-4 pl-4">
-              <FontAwesome name="user-o" size={24} color="#b1b6c8" />
+              <MaterialIcons name="lock-outline" size={17} color="#b1b6c8" />
               <TextInput
                 placeholder="Password"
                 className="flex-1 px-3 items-center h-[50px]"
               />
             </View>
+          </View>
+          <View className="flex w-full items-center py-4">
+            <CustomButton
+              handlePress={() => router.push("/login")}
+            content="Sign In"
+            />
+          </View>
+          <View className="w-full flex-row justify-center items-center pb-4">
+            <View className="h-[1px] mr-4 w-[40%] bg-third"></View>
+            <Text className="text-third font-bold">OR</Text>
+            <View className="h-[1px] ml-4 w-[40%] bg-third"></View>
+          </View>
+          <View className="flex flex-col w-full">
+            <View className="relative h-[50px] flex-row items-center justify-center border border-third w-full rounded-md">
+              <Image
+                source={googleImg}
+                className="w-[28px] h-[28px] absolute left-6"
+                alt=""
+              />
+              <Text className="text-third">Login with Google</Text>
+            </View>
+            <View className="relative h-[50px] mt-2 flex-row items-center justify-center border border-third w-full rounded-md">
+              <Image
+                source={facebookImg}
+                className="w-[19px] h-[19px] absolute left-7"
+                alt=""
+              />
+              <Text className="text-third">Login with Facebook</Text>
+            </View>
+          </View>
+          <View className="flex flex-col items-center pt-5">
+            <Text className="text-primary font-bold">Forgot Password? </Text>
+            <Text className="text-third mt-2">
+              Don't have an account?{" "}
+              <Link href="/signup" className="text-primary font-bold">
+                Register
+              </Link>
+            </Text>
           </View>
         </View>
       </ScrollView>
