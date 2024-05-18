@@ -23,7 +23,7 @@ const search = () => {
           <TextInput
             placeholder="Search for your preferred restaurant"
             className="text flex-1 ml-4 items-center h-[50px]"
-            onKeyPress={() => router.push("/restaurants")}
+            onFocus={() => router.push("/restaurants")}
           />
         </View>
         <View className="w-full flex-col items-center py-20">

@@ -1,4 +1,5 @@
 import { Entypo } from "@expo/vector-icons";
+import { router } from "expo-router";
 import {
   SafeAreaView,
   ScrollView,
@@ -9,7 +10,6 @@ import {
   TouchableOpacity
 } from "react-native";
 import Restaurant from "../../components/Restaurant";
-import { router } from "expo-router";
 
 const restaurants = () => {
   const restaurantInfo = [
@@ -45,21 +45,22 @@ const restaurants = () => {
           height: "100%",
         }}
       >
-        <View className="w-full flex-row border-b border-third pl-4 pb-2 items-center">
-          <TouchableOpacity className="p-2 bg-[#d8d8da] rounded-sm" onPress={() => router.push("/search")}>
+        <View className="w-full flex-row border-b border-[#10104721] pl-4 pb-2 items-center">
+          <TouchableOpacity
+            className="p-2 bg-[#1010470e] rounded-sm"
+            onPress={() => router.push("/search")}
+          >
             <Entypo name="chevron-small-left" size={28} color="#f7941d" />
           </TouchableOpacity>
           <TextInput placeholder="Search..." className="flex-1 ml-5 p-2" />
         </View>
-        <View className="p-5">
+        <View className="px-5 py-3">
           <Text className="text-primary font-bold">Nearby Restaurants</Text>
-          <View className="py-4">
-            <FlatList
-              data={restaurantInfo}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => <Restaurant image={item.image} />}
-            />
-          </View>
+          <ScrollView className="py-3">
+            {restaurantInfo.map((item, index) => (
+              <Restaurant key={index} image={item.image} />
+            ))}
+          </ScrollView>
         </View>
       </ScrollView>
     </SafeAreaView>

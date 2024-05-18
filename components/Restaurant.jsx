@@ -3,7 +3,7 @@ import { View, Text, Image } from "react-native"
 
 const Restaurant = ({image}) => {
   return (
-    <View className="h-[95px] w-full flex-row px-3 py-2 bg-[#f8f8fb] rounded-md mt-4">
+    <View className="h-[95px] w-full flex-row px-3 py-2 bg-[#1010470e] rounded-md mt-3">
       <View className="h-full w-[75px] bg-third rounded-md overflow-hidden">
         <Image
           source={image}
@@ -19,7 +19,7 @@ const Restaurant = ({image}) => {
         </Text>
         <View className="flex-row mt-3 items-center">
           <AntDesign name="star" size={15} color="#f7941d" />
-          <Text className="text-third ml-2 font-bold font-primary">4.8</Text>
+          <Text className="ml-2 font-bold text-primary">4.8</Text>
         </View>
       </View>
     </View>
