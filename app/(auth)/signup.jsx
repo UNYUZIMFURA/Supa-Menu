@@ -65,7 +65,10 @@ const Signup = () => {
             </View>
           </View>
           <View className="flex w-full items-center py-4">
-            <CustomButton content="Proceed" />
+            <CustomButton
+              handlePress={() => router.push("/search")}
+              content="Proceed"
+            />
           </View>
           <Text className="text-third font-bold mt-4">OR</Text>
           <Text className="text-third py-1 font-bold">

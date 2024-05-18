@@ -8,7 +8,6 @@ const RootLayout = () => {
         options={{
           headerShown: false,
         }}
-      
       ></Stack.Screen>
       <Stack.Screen
         name="(auth)"
@@ -21,8 +20,13 @@ const RootLayout = () => {
         options={{
           headerShown: false,
         }}
-      >
-      </Stack.Screen>
+      ></Stack.Screen>
+      <Stack.Screen
+        name="(tabs)"
+        options={{
+          headerShown: false,
+        }}
+      ></Stack.Screen>
     </Stack>
   );
 };

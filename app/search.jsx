@@ -5,10 +5,11 @@ import {
   View,
   TextInput,
   TouchableOpacity,
-  Image,
 } from "react-native";
+import { router } from "expo-router";
 import { Fontisto } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+
 const search = () => {
   return (
     <SafeAreaView className="bg-primary h-full pt-24 px-5">
@@ -22,6 +23,7 @@ const search = () => {
           <TextInput
             placeholder="Search for your preferred restaurant"
             className="text flex-1 ml-4 items-center h-[50px]"
+            onKeyPress={() => router.push("/restaurants")}
           />
         </View>
         <View className="w-full flex-col items-center py-20">
