@@ -1,5 +1,6 @@
 import { AntDesign } from "@expo/vector-icons";
-import { View, Text, Image } from "react-native"
+import { View, Text, Image, TouchableOpacity } from "react-native"
+import {router} from "expo-router"
 
 const Restaurant = ({image}) => {
   return (
@@ -12,7 +13,7 @@ const Restaurant = ({image}) => {
           className="w-full h-full"
         />
       </View>
-      <View className="ml-5">
+      <TouchableOpacity className="ml-5" onPress={() => router.push("/menu")}>
         <Text className="text-third font-bold">Choose Kigali</Text>
         <Text className="text-third text-xs mt-3">
           World, African, Pizzeria, Coffee
@@ -21,7 +22,7 @@ const Restaurant = ({image}) => {
           <AntDesign name="star" size={15} color="#f7941d" />
           <Text className="ml-2 font-bold text-primary">4.8</Text>
         </View>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };
