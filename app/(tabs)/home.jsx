@@ -13,6 +13,7 @@ import { router } from "expo-router";
 import { Entypo } from "@expo/vector-icons";
 
 const Home = () => {
+ const [quantity, setQuantity] = useState(1)
  const [selectedIngredientIndex, setSelectedIngredientIndex] = useState(null);
   const featuredFood = [
     {
@@ -33,12 +34,12 @@ const Home = () => {
     },
   ];
   const ingredients = [
-    { name: "Onions" },
-    { name: "Tomatoes" },
-    { name: "Meat" },
-    { name: "Salad" },
-    { name: "Meat" },
-    { name: "Salad" },
+    { name: "Onions", image: require("../../assets/images/onions.jpg") },
+    { name: "Tomatoes", image: require("../../assets/images/tomato.jpg") },
+    { name: "Meat", image: require("../../assets/images/chocolate.jpg") },
+    { name: "Salad", image: require("../../assets/images/salad.jpg") },
+    { name: "Meat", image: require("../../assets/images/chocolate.jpg") },
+    { name: "Salad", image: require("../../assets/images/chocolate.jpg") },
   ];
   return (
     <SafeAreaView className="h-full bg-[#f3f4f6]">
@@ -77,7 +78,7 @@ const Home = () => {
                   }`}
                 >
                   <View className="h-[53px] w-[53px] bg-white rounded-full overflow-hidden">
-                    <Image source={food} alt="" className="h-full w-full" />
+                    <Image source={item.image} alt="" className="h-full w-full" />
                   </View>
                   <Text
                     className={`mt-2 text-xs ${
@@ -93,11 +94,11 @@ const Home = () => {
         </View>
         <View className="flex-row px-3 py-4 justify-between items-center">
           <View className="h-[50px] w-[120px] flex-row justify-center items-center rounded-full">
-            <TouchableOpacity className="flex items-center justify-center py-1 px-4 rounded-full bg-secondary">
+            <TouchableOpacity onPress={() => setQuantity(prevState => prevState -1)} className="flex items-center justify-center py-1 px-4 rounded-full bg-secondary">
               <Text className="text-white font-bold">-</Text>
             </TouchableOpacity>
-            <Text className="ml-2 text-third font-bold">04</Text>
-            <TouchableOpacity className="flex items-center justify-center py-1 px-4 ml-2 bg-primary rounded-full">
+            <Text className="ml-2 text-third font-bold">{quantity}</Text>
+            <TouchableOpacity onPress={() => setQuantity(prevState => prevState + 1)} className="flex items-center justify-center py-1 px-4 ml-2 bg-primary rounded-full">
               <Text className="text-white font-bold">+</Text>
             </TouchableOpacity>
           </View>
