@@ -13,8 +13,8 @@ const Restaurant = ({image}) => {
           className="w-full h-full"
         />
       </View>
-      <TouchableOpacity className="ml-5" onPress={() => router.push("/menu")}>
-        <Text className="text-third font-bold">Choose Kigali</Text>
+      <TouchableOpacity className="ml-5" onPress={() => router.push("/home")}>
+        <Text className="text-secondary font-bold">Choose Kigali</Text>
         <Text className="text-third text-xs mt-3">
           World, African, Pizzeria, Coffee
         </Text>

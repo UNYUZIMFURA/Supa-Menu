@@ -27,6 +27,10 @@ const Home = () => {
       name: "Steak",
       image: require("../../assets/images/steak.jpg"),
     },
+    {
+      name: "Hot chocolate",
+      image: require("../../assets/images/chocolate.jpg"),
+    },
   ];
   const ingredients = [
     { name: "Onions" },
@@ -92,7 +96,7 @@ const Home = () => {
             <TouchableOpacity className="flex items-center justify-center py-1 px-4 rounded-full bg-secondary">
               <Text className="text-white font-bold">-</Text>
             </TouchableOpacity>
-            <Text className="ml-2">04</Text>
+            <Text className="ml-2 text-third font-bold">04</Text>
             <TouchableOpacity className="flex items-center justify-center py-1 px-4 ml-2 bg-primary rounded-full">
               <Text className="text-white font-bold">+</Text>
             </TouchableOpacity>
@@ -102,19 +106,19 @@ const Home = () => {
           </TouchableOpacity>
         </View>
         <View className="flex-col justify-center w-[93%] mx-auto shadow bg-[#f3f4f6] rounded-md">
-          <View className="h-[70px] flex-row items-center justify-between w-full p-4">
+          <View className="h-[60px] flex-row items-center justify-between w-full p-4">
             <TouchableOpacity
-              className="p-2 bg-primary rounded-sm"
+              className="h-[30px] w-[30px] items-center justify-center bg-primary rounded-sm"
               onPress={() => router.push("/search")}
             >
               <Entypo name="chevron-small-left" size={22} color="white" />
             </TouchableOpacity>
             <Text className="font-bold text-secondary">Featured Food</Text>
             <TouchableOpacity
-              className="flex items-center justify-center p-2 bg-white rounded-sm"
+              className="h-[30px] w-[30px] items-center justify-center p-1 bg-white rounded-sm"
               onPress={() => router.push("/search")}
             >
-              <Entypo name="dots-three-vertical" size={16} color="black" />
+              <Entypo name="dots-three-vertical" size={14} color="black" />
             </TouchableOpacity>
           </View>
           <ScrollView className="w-full px-4">
