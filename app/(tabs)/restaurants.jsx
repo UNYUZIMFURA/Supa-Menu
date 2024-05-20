@@ -6,7 +6,6 @@ import {
   Text,
   View,
   TextInput,
-  FlatList,
   TouchableOpacity
 } from "react-native";
 import Restaurant from "../../components/Restaurant";

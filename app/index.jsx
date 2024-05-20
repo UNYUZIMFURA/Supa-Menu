@@ -16,7 +16,7 @@ const App = () => {
       >
         <TouchableOpacity
           onPress={() => {
-            router.push("/notifications");
+            router.push("/signup");
           }}
         >
           <Text className="text-4xl font-bold">
