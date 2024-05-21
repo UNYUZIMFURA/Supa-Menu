@@ -1,8 +1,8 @@
 import { AntDesign } from "@expo/vector-icons";
-import { View, Text, Image, TouchableOpacity } from "react-native"
-import {router} from "expo-router"
+import { View, Text, Image, TouchableOpacity } from "react-native";
+import { router } from "expo-router";
 
-const Restaurant = ({image}) => {
+const TopFood = ({ name, image }) => {
   return (
     <View className="h-[95px] w-full flex-row px-3 py-2 bg-[#1010470e] rounded-md mt-3">
       <View className="h-full w-[75px] bg-third rounded-md overflow-hidden">
@@ -14,7 +14,7 @@ const Restaurant = ({image}) => {
         />
       </View>
       <TouchableOpacity className="ml-5" onPress={() => router.push("/home")}>
-        <Text className="text-secondary font-bold">Choose Kigali</Text>
+        <Text className="text-secondary font-bold">{name}</Text>
         <Text className="text-third text-xs mt-3">
           World, African, Pizzeria, Coffee
         </Text>
@@ -27,4 +27,4 @@ const Restaurant = ({image}) => {
   );
 };
 
-export default Restaurant;
+export default TopFood;

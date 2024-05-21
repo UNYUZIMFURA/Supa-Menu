@@ -6,34 +6,40 @@ import {
   Text,
   View,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
-import Restaurant from "../../components/Restaurant";
+import TopFood from "../../components/TopFood";
 
-const restaurants = () => {
-  const restaurantInfo = [
+const food = () => {
+  const foodInfo = [
     {
       id: 1,
+      name: "Fresh Juice",
       image: require("../../assets/images/juice.jpg"),
     },
     {
       id: 2,
+      name: "Warm Beer",
       image: require("../../assets/images/beer.jpg"),
     },
     {
       id: 3,
+      name: "Coca Cola",
       image: require("../../assets/images/coca.jpg"),
     },
     {
       id: 4,
+      name: "Hamburger",
       image: require("../../assets/images/food.jpg"),
     },
     {
       id: 5,
+      name: "Fresh Juice",
       image: require("../../assets/images/juice.jpg"),
     },
     {
       id: 6,
+      name: "Cold Beer",
       image: require("../../assets/images/beer.jpg"),
     },
   ];
@@ -54,10 +60,10 @@ const restaurants = () => {
           <TextInput placeholder="Search..." className="flex-1 ml-5 p-2" />
         </View>
         <View className="px-5 py-3">
-          <Text className="text-primary font-bold">Nearby Restaurants</Text>
+          <Text className="text-primary font-bold">Popular Food 🍕</Text>
           <ScrollView className="py-3">
-            {restaurantInfo.map((item, index) => (
-              <Restaurant key={index} image={item.image} />
+            {foodInfo.map((item, index) => (
+              <TopFood key={index} image={item.image} name={item.name} />
             ))}
           </ScrollView>
         </View>
@@ -66,4 +72,4 @@ const restaurants = () => {
   );
 };
 
-export default restaurants;
+export default food;

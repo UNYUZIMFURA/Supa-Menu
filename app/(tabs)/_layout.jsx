@@ -29,43 +29,13 @@ const TabsLayout = () => {
           }}
         />
         <Tabs.Screen
-          name="notifications"
-          options={{
-            headerShown: false,
-            tabBarIcon: ({ focused }) => (
-              <View className="items-center justify-center gap-22">
-                <FontAwesome
-                  name="bell-o"
-                  size={23}
-                  color={focused ? "#f7941d" : "#484848"}
-                />
-              </View>
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="restaurants"
+          name="food"
           options={{
             headerShown: false,
             tabBarIcon: ({ focused }) => (
               <View className="items-center justify-center gap-22">
                 <Ionicons
                   name="restaurant-outline"
-                  size={24}
-                  color={focused ? "#f7941d" : "#484848"}
-                />
-              </View>
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="recents"
-          options={{
-            headerShown: false,
-            tabBarIcon: ({ focused }) => (
-              <View className="items-center justify-center gap-22">
-                <Feather
-                  name="clock"
                   size={24}
                   color={focused ? "#f7941d" : "#484848"}
                 />
@@ -82,6 +52,36 @@ const TabsLayout = () => {
                 <AntDesign
                   name="shoppingcart"
                   size={24}
+                  color={focused ? "#f7941d" : "#484848"}
+                />
+              </View>
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="checkout"
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ focused }) => (
+              <View className="items-center justify-center gap-22">
+                <Feather
+                  name="clock"
+                  size={24}
+                  color={focused ? "#f7941d" : "#484848"}
+                />
+              </View>
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="notifications"
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ focused }) => (
+              <View className="items-center justify-center gap-22">
+                <FontAwesome
+                  name="bell-o"
+                  size={23}
                   color={focused ? "#f7941d" : "#484848"}
                 />
               </View>

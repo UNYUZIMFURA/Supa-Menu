@@ -1,10 +1,38 @@
-import { SafeAreaView, ScrollView, View, TouchableOpacity, TextInput, Text } from "react-native";
+import {
+  SafeAreaView,
+  ScrollView,
+  View,
+  TouchableOpacity,
+  TextInput,
+  Text,
+} from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import { router } from "expo-router";
 import CartProduct from "../../components/CartProduct";
 
 const Cart = () => {
-   const cartProducts = [1,2,3,4]
+  const cartProducts = [
+    {
+      image: require("../../assets/images/wine.jpg"),
+      name: "Wine",
+      price: 5000,
+    },
+    {
+      image: require("../../assets/images/burger2.jpg"),
+      name: "Hamburger",
+      price: 6000,
+    },
+    {
+      image: require("../../assets/images/beer.jpg"),
+      name: "Beer",
+      price: 10000,
+    },
+    {
+      image: require("../../assets/images/juice.jpg"),
+      name: "Juice",
+      price: 20000,
+    },
+  ];
   return (
     <SafeAreaView>
       <ScrollView className="h-full pt-10 bg-[#f3f4f6]">
@@ -22,7 +50,12 @@ const Cart = () => {
         </Text>
         <View className="w-full px-5">
           {cartProducts.map((item, index) => (
-            <CartProduct key={index} />
+            <CartProduct
+              key={index}
+              image={item.image}
+              name={item.name}
+              price={item.price}
+            />
           ))}
         </View>
         <ScrollView className="w-full px-5 py-5 pb-10">

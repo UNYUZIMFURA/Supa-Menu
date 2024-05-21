@@ -5,7 +5,9 @@ import { Foundation } from "@expo/vector-icons";
 const FeaturedFood = ({ name, image }) => {
   const [liked, setLiked] = useState(false);
   return (
-    <View className={`h-[100px] py-3 px-2 flex-row items-center justify-between mt-3 w-full rounded-md bg-white`}>
+    <View
+      className={`h-[100px] py-3 px-2 flex-row items-center justify-between mt-3 w-full rounded-md bg-white`}
+    >
       <View className="flex-row">
         <View className="h-full w-[75px] rounded-full overflow-hidden">
           <Image source={image} alt="" className="h-full w-full" />

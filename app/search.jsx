@@ -4,7 +4,7 @@ import {
   Text,
   View,
   TextInput,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
 } from "react-native";
 import { router } from "expo-router";
 import { Fontisto } from "@expo/vector-icons";
@@ -28,10 +28,20 @@ const search = () => {
         </View>
         <View className="w-full flex-col items-center py-20">
           <Text className="font-bold text-lg text-[#363636]">OR</Text>
-          <TouchableWithoutFeedback className="flex-row w-full justify-center mt-8" onPress={() => router.push("/restaurants")}>
-            <FontAwesome name="qrcode" size={200} color="black" />
+          <TouchableWithoutFeedback
+            className="flex-row w-full justify-center mt-8"
+            onPress={() => router.push("/food")}
+          >
+            <FontAwesome
+              name="qrcode"
+              size={200}
+              color="black"
+              style={{
+                marginTop: 8,
+              }}
+            />
           </TouchableWithoutFeedback>
-          <Text className="font-bold text-lg text-[#363636] mt-8">
+          <Text className="font-bold text-lg text-[#363636]">
             Scan, Pay & Enjoy!
           </Text>
         </View>

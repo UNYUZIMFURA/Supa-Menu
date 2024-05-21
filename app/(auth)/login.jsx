@@ -1,4 +1,3 @@
-import CustomButton from "../../components/CustomButton";
 import { router, Link } from "expo-router";
 import {
   SafeAreaView,
@@ -7,12 +6,13 @@ import {
   View,
   TextInput,
   TouchableOpacity,
-  Image
+  Image,
 } from "react-native";
-import facebookImg from "../../assets/images/facebook.png"
-import googleImg from "../../assets/images/google.png"
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
+import CustomButton from "../../components/CustomButton";
+import facebookImg from "../../assets/images/facebook.png";
+import googleImg from "../../assets/images/google.png";
 
 const Login = () => {
   return (
@@ -61,8 +61,8 @@ const Login = () => {
           </View>
           <View className="flex w-full items-center py-4">
             <CustomButton
-            handlePress={() => router.push("/search")}
-            content="Sign In"
+              handlePress={() => router.push("/search")}
+              content="Sign In"
             />
           </View>
           <View className="w-full flex-row justify-center items-center pb-4">

@@ -13,8 +13,8 @@ import { router } from "expo-router";
 import { Entypo } from "@expo/vector-icons";
 
 const Home = () => {
- const [quantity, setQuantity] = useState(1)
- const [selectedIngredientIndex, setSelectedIngredientIndex] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [selectedIngredientIndex, setSelectedIngredientIndex] = useState(null);
   const featuredFood = [
     {
       name: "Mexican Cheese",

@@ -4,7 +4,7 @@ import { FontAwesome6 } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 
 const Notifications = () => {
-  const menuItems = ["Appetizer", "Starter", "Main", "Dessert", "Drink"]
+  const menuItems = ["Appetizer", "Starter", "Main", "Dessert", "Drink"];
   return (
     <SafeAreaView className="bg-black">
       <ScrollView
@@ -30,11 +30,19 @@ const Notifications = () => {
           <Text className="text-primary text-xl font-bold">Menu</Text>
           <View className="w-full px-[70px]">
             {menuItems.map((menu, index) => (
-              <View key={index} className="w-full mt-8 flex-row items-center justify-between">
+              <View
+                key={index}
+                className="w-full mt-8 flex-row items-center justify-between"
+              >
                 <Text className="text-white text-xl">{menu}</Text>
-                <Entypo name="chevron-small-right" size={24} color="white" style={{
-                  marginTop: 4
-                }} />
+                <Entypo
+                  name="chevron-small-right"
+                  size={24}
+                  color="white"
+                  style={{
+                    marginTop: 4,
+                  }}
+                />
               </View>
             ))}
           </View>
