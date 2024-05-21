@@ -1,3 +1,2 @@
-# Welcome to Supa Menu Application 👋
+# Welcome to Supa Menu 👋
 
-This is an [Expo](https://expo.dev) based project created with React-Native and TailwindCSS.
