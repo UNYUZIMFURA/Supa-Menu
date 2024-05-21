@@ -17,7 +17,12 @@
 ![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-170827.jpg)
 ![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-170741.jpg)
 ![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-162040.jpg)
+![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-170852.jpg)
 ![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-161936.jpg)
+![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-161849.jpg)
+![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-161843.jpg)
+![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-161833.jpg)
+![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-161822.jpg)
 
 # Licence
 
