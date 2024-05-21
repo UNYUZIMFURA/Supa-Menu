@@ -1,5 +1,6 @@
 import { SafeAreaView, ScrollView, View, TouchableOpacity, TextInput, Text } from "react-native";
 import { Entypo } from "@expo/vector-icons";
+import { router } from "expo-router";
 import CartProduct from "../../components/CartProduct";
 
 const Cart = () => {
@@ -10,7 +11,7 @@ const Cart = () => {
         <View className="w-full flex-row border-b border-[#10104721] pl-4 pb-2 items-center">
           <TouchableOpacity
             className="p-2 bg-[#1010470e] rounded-sm"
-            onPress={() => router.push("/search")}
+            onPress={() => router.back()}
           >
             <Entypo name="chevron-small-left" size={28} color="#f7941d" />
           </TouchableOpacity>
@@ -29,24 +30,25 @@ const Cart = () => {
             <Text className="text-secondary font-bold">Payment Summary</Text>
             <View className="flex-col gap-y-4 mt-4">
               <View className="w-full flex-row justify-between">
-                <Text>Total items</Text>
-                <Text>$18</Text>
+                <Text className="text-third">Total items</Text>
+                <Text className="text-secondary">FRW 50,000</Text>
               </View>
               <View className="w-full flex-row justify-between">
-                <Text>Shipping Costs</Text>
-                <Text>Free</Text>
+                <Text className="text-third">Shipping Costs</Text>
+                <Text className="text-secondary">Free</Text>
               </View>
               <View className="w-full flex-row justify-between">
-                <Text>VAT</Text>
-                <Text>$18</Text>
+                <Text className="text-third">VAT</Text>
+                <Text className="text-secondary">-FRW 5,000</Text>
               </View>
+              <View className="h-[1px] w-full border border-dashed border-third"></View>
               <View className="w-full flex-row justify-between">
-                <Text>Total</Text>
-                <Text>$50</Text>
+                <Text className="font-bold text-primary">Total</Text>
+                <Text className="text-primary font-bold">FRW 45,000</Text>
               </View>
             </View>
-            <TouchableOpacity className="bg-primary py-4 mt-8 items-center justify-center rounded-md">
-              <Text className="text-white">PROCEED TO CHECKOUT</Text>
+            <TouchableOpacity className="bg-[#3EB075] py-4 mt-8 items-center justify-center rounded-md">
+              <Text className="text-white font-bold">PROCEED TO CHECKOUT</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>
