@@ -13,8 +13,9 @@
 
 # Screenshots
 
-- Main Screen
-  ![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-161822.png)
+![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/main.jpg)
+![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-170827.jpg)
+![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-170741.jpg)
 
 # Licence
 
