@@ -13,7 +13,8 @@
 
 # Screenshots
 
-- Main Screen (https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-170758.png)
+- Main Screen
+  ![](https://github.com/UNYUZIMFURA/Supa-Menu/blob/master/assets/screenshots/Screenshot_20240521-170758.png) 
 
 # Licence
 
