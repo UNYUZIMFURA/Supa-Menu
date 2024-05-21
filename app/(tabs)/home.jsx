@@ -39,7 +39,7 @@ const Home = () => {
     { name: "Meat", image: require("../../assets/images/meat.jpg") },
     { name: "Salad", image: require("../../assets/images/salad.jpg") },
     { name: "Lemon", image: require("../../assets/images/lemon.jpg") },
-    { name: "Salad", image: require("../../assets/images/chocolate.jpg") },
+    { name: "Chips", image: require("../../assets/images/chips.jpg") },
   ];
   return (
     <SafeAreaView className="h-full bg-[#f3f4f6]">
