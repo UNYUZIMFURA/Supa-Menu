@@ -10,4 +10,10 @@
 - Shopping Cart with associated Product prices
 - Checkout Screen
 - Login and Signup Screens
+
+# Licence
+
+This project is licensed under the MIT License
+
+Thank you for checking out Supa Menu! 😉, Leave a Star if you liked it ⭐
   
