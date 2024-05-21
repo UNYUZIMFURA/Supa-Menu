@@ -26,10 +26,9 @@ const search = () => {
             onFocus={() => router.push("/restaurants")}
           />
         </View>
-        <View className="w-full flex-col items-center py-20">
-          <Text className="font-bold text-lg text-[#363636]">OR</Text>
+        <View className="w-full h-[450px] justify-between flex-col items-center py-20">
+          <Text className="font-bold text-lg text-[#363636]">OR</Text>  
           <TouchableWithoutFeedback
-            className="flex-row w-full justify-center mt-8"
             onPress={() => router.push("/food")}
           >
             <FontAwesome
@@ -37,7 +36,7 @@ const search = () => {
               size={200}
               color="black"
               style={{
-                marginTop: 8,
+                marginTop: 14
               }}
             />
           </TouchableWithoutFeedback>
