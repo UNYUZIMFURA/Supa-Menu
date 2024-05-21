@@ -1,3 +1,3 @@
 # Welcome to Supa Menu 👋
 
-# A React-Native based Mobile Application
+- Supa Menu is
