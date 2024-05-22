@@ -28,6 +28,7 @@
 
 This project is licensed under the MIT License
 
+# Leave a Star ⭐😉,
 
 Thank you for checking out Supa Menu! 😉, Leave a Star if you liked it ⭐
   
