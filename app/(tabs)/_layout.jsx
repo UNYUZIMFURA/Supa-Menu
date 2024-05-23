@@ -22,7 +22,7 @@ const TabsLayout = () => {
                 <AntDesign
                   name="home"
                   size={25}
-                  color={focused ? "#f7941d" : "#484848"}
+                  color={focused ? "#3EB075" : "#484848"}
                 />
               </View>
             ),
@@ -37,7 +37,7 @@ const TabsLayout = () => {
                 <Ionicons
                   name="restaurant-outline"
                   size={24}
-                  color={focused ? "#f7941d" : "#484848"}
+                  color={focused ? "#3EB075" : "#484848"}
                 />
               </View>
             ),
@@ -52,7 +52,7 @@ const TabsLayout = () => {
                 <AntDesign
                   name="shoppingcart"
                   size={24}
-                  color={focused ? "#f7941d" : "#484848"}
+                  color={focused ? "#3EB075" : "#484848"}
                 />
               </View>
             ),
@@ -67,7 +67,7 @@ const TabsLayout = () => {
                 <Feather
                   name="clock"
                   size={24}
-                  color={focused ? "#f7941d" : "#484848"}
+                  color={focused ? "#3EB075" : "#484848"}
                 />
               </View>
             ),
@@ -82,7 +82,7 @@ const TabsLayout = () => {
                 <FontAwesome
                   name="bell-o"
                   size={23}
-                  color={focused ? "#f7941d" : "#484848"}
+                  color={focused ? "#3EB075" : "#484848"}
                 />
               </View>
             ),

@@ -19,7 +19,7 @@ const TopFood = ({ name, image }) => {
           World, African, Pizzeria, Coffee
         </Text>
         <View className="flex-row mt-3 items-center">
-          <AntDesign name="star" size={15} color="#f7941d" />
+          <AntDesign name="star" size={15} color="#3EB075" />
           <Text className="ml-2 font-bold text-primary">4.8</Text>
         </View>
       </TouchableOpacity>

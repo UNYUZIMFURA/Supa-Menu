@@ -17,12 +17,12 @@ const Notifications = () => {
         </View>
         <View className="flex-row justify-center h-[130px] items-end">
           <View className="flex-col items-center justify-start">
-            <MaterialIcons name="table-restaurant" size={76} color="#f7941d" />
+            <MaterialIcons name="table-restaurant" size={76} color="#3EB075" />
             <Text className="text-white font-bold">Ordered - 10+</Text>
           </View>
           <View className="w-[1px] bg-primary h-[90px] ml-16"></View>
           <View className="flex-col items-center justify-start ml-16">
-            <FontAwesome6 name="microphone-lines" size={52} color="#f7941d" />
+            <FontAwesome6 name="microphone-lines" size={52} color="#3EB075" />
             <Text className="text-white font-bold mt-3">Call Waiter</Text>
           </View>
         </View>

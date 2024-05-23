@@ -22,7 +22,7 @@ const FeaturedFood = ({ name, image }) => {
         <Foundation
           name="heart"
           size={18}
-          color={liked ? "red" : "black"}
+          color={"#3EB075"}
           onPress={() => setLiked((prevState) => !prevState)}
         />
         <Text className="text-secondary font-bold text-xs">$50.00</Text>

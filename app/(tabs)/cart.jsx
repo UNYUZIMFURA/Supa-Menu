@@ -41,7 +41,7 @@ const Cart = () => {
             className="p-2 bg-[#1010470e] rounded-sm"
             onPress={() => router.back()}
           >
-            <Entypo name="chevron-small-left" size={28} color="#f7941d" />
+            <Entypo name="chevron-small-left" size={28} color="#3EB075" />
           </TouchableOpacity>
           <TextInput placeholder="Search..." className="flex-1 ml-5 p-2" />
         </View>
@@ -80,7 +80,7 @@ const Cart = () => {
                 <Text className="text-primary font-bold">FRW 45,000</Text>
               </View>
             </View>
-            <TouchableOpacity className="bg-[#3EB075] py-4 mt-8 items-center justify-center rounded-md">
+            <TouchableOpacity onPress={() => router.push("/checkout")} className="bg-[#3EB075] py-4 mt-8 items-center justify-center rounded-md">
               <Text className="text-white font-bold">PROCEED TO CHECKOUT</Text>
             </TouchableOpacity>
           </View>

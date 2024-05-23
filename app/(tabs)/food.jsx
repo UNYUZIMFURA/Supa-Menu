@@ -53,9 +53,9 @@ const food = () => {
         <View className="w-full flex-row border-b border-[#10104721] pl-4 pb-2 items-center">
           <TouchableOpacity
             className="p-2 bg-[#1010470e] rounded-sm"
-            onPress={() => router.push("/search")}
+            onPress={() => router.back()}
           >
-            <Entypo name="chevron-small-left" size={28} color="#f7941d" />
+            <Entypo name="chevron-small-left" size={28} color="#3EB075" />
           </TouchableOpacity>
           <TextInput placeholder="Search..." className="flex-1 ml-5 p-2" />
         </View>

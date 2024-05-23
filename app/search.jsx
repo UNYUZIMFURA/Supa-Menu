@@ -19,28 +19,26 @@ const search = () => {
         }}
       >
         <View className="bg-white flex-row items-center w-full h-[50px] rounded-full border-third pl-6 overflow-hidden">
-          <Fontisto name="search" size={18} color="#f7941d" />
+          <Fontisto name="search" size={18} color="#3EB075" />
           <TextInput
             placeholder="Search for your preferred restaurant"
             className="text flex-1 ml-4 items-center h-[50px]"
-            onFocus={() => router.push("/restaurants")}
+            onFocus={() => router.push("/home")}
           />
         </View>
         <View className="w-full h-[450px] justify-between flex-col items-center py-20">
-          <Text className="font-bold text-lg text-[#363636]">OR</Text>  
-          <TouchableWithoutFeedback
-            onPress={() => router.push("/food")}
-          >
+          <Text className="font-bold text-lg text-white">OR</Text>
+          <TouchableWithoutFeedback onPress={() => router.push("/food")}>
             <FontAwesome
               name="qrcode"
               size={200}
               color="black"
               style={{
-                marginTop: 14
+                marginTop: 14,
               }}
             />
           </TouchableWithoutFeedback>
-          <Text className="font-bold text-lg text-[#363636]">
+          <Text className="font-bold text-lg text-white">
             Scan, Pay & Enjoy!
           </Text>
         </View>

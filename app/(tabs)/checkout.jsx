@@ -10,11 +10,14 @@ import PaymentMethod from "../../components/PaymentMethod";
 import clientImg from "../../assets/images/client.jpg";
 import airtelImg from "../../assets/images/airtel.jpeg";
 import masterCardImg from "../../assets/images/master-card.jpeg";
+import momoImg from "../../assets/images/momo.png"
 
 const Checkout = () => {
   return (
     <SafeAreaView>
-      <ScrollView className="h-full pt-6 px-6 bg-[#f3f4f6]">
+      <ScrollView className="pt-10 px-6 bg-[#f3f4f6]" contentContainerStyle={{
+        paddingBottom: 60
+      }}>
         <View className="flex-col w-full items-center">
           <View className="h-[130px] w-[130px] rounded-full overflow-hidden">
             <Image source={clientImg} className="h-full w-full" />
@@ -33,10 +36,15 @@ const Checkout = () => {
             accountNo="0738000055"
             name="Airtel Money"
           />
+          <PaymentMethod
+            image={momoImg}
+            accountNo="0788060055"
+            name="Mobile Money"
+          />
         </View>
-        <View className="flex-col items-center py-3 gap-y-1">
-          <Text className="text-secondary">Total</Text>
-          <Text className="text-xl text-primary font-bold">$ 315.00</Text>
+        <View className="flex-col items-center py-3 gap-y-3">
+          <Text className="text-secondary text-lg font-bold">TOTAL</Text>
+          <Text className="text-3xl text-primary font-bold">RWF 45,000</Text>
         </View>
         <TouchableOpacity className="p-4 mt-2 bg-[#3EB075] rounded-md items-center justify-center">
           <Text className="text-white">Pay for the Order</Text>
