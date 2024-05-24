@@ -1,3 +1,6 @@
+import CustomButton from "../../components/CustomButton";
+import facebookImg from "../../assets/images/facebook.png";
+import googleImg from "../../assets/images/google.png";
 import { router, Link } from "expo-router";
 import {
   SafeAreaView,
@@ -10,9 +13,6 @@ import {
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
-import CustomButton from "../../components/CustomButton";
-import facebookImg from "../../assets/images/facebook.png";
-import googleImg from "../../assets/images/google.png";
 
 const Login = () => {
   return (

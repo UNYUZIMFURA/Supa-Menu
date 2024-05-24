@@ -1,3 +1,8 @@
+import food from "../../assets/images/burger2.jpg";
+import FeaturedFood from "../../components/FeaturedFood";
+import { Entypo } from "@expo/vector-icons";
+import { useState } from "react";
+import { router } from "expo-router";
 import {
   SafeAreaView,
   ScrollView,
@@ -5,14 +10,10 @@ import {
   Text,
   Image,
   TouchableOpacity,
+  ImageBackground
 } from "react-native";
-import { useState } from "react";
-import food from "../../assets/images/burger2.jpg";
-import FeaturedFood from "../../components/FeaturedFood";
-import { router } from "expo-router";
-import { Entypo } from "@expo/vector-icons";
 
-const Home = () => {
+const FoodDetails = () => {
   const [quantity, setQuantity] = useState(1);
   const [selectedIngredientIndex, setSelectedIngredientIndex] = useState(null);
   const featuredFood = [
@@ -44,9 +45,20 @@ const Home = () => {
   return (
     <SafeAreaView className="h-full bg-[#f3f4f6]">
       <ScrollView>
-        <View className="relative h-[300px] w-full bg-secondary rounded-b-[20px] overflow-hidden">
-          <Image source={food} alt="" className="h-full w-full" />
-        </View>
+        <ImageBackground
+          source={food}
+          className="relative h-[300px] w-full bg-secondary rounded-b-[20px] overflow-hidden"
+        >
+          <TouchableOpacity onPress={() => router.back()} className="absolute h-[35px] w-[40px] bg-[#000000a4] top-8 left-4 rounded-full items-center justify-center z-10">
+            <Entypo name="chevron-small-left" size={28} color="#fff" />
+          </TouchableOpacity>
+          <View
+            className="h-full w-full"
+            style={{
+              backgroundColor: "rgba(0,0,0,.3)",
+            }}
+          ></View>
+        </ImageBackground>
         <View className="px-3 py-6 flex-row justify-between items-center w-full">
           <View>
             <Text className="text-secondary font-bold">Cheese Burger</Text>
@@ -60,6 +72,7 @@ const Home = () => {
           <Text className="text-secondary font-bold">Ingredients</Text>
           <ScrollView
             horizontal={true}
+            showsHorizontalScrollIndicator={false}
             className="h-[100px] flex-row mt-4 gap-x-2"
           >
             {ingredients.map((item, index) => {
@@ -107,7 +120,10 @@ const Home = () => {
               <Text className="text-white font-bold">+</Text>
             </TouchableOpacity>
           </View>
-          <TouchableOpacity className="bg-secondary rounded-md flex items-center justify-center h-[40px] px-4">
+          <TouchableOpacity
+            onPress={() => router.push("/cart")}
+            className="bg-secondary rounded-md flex items-center justify-center h-[40px] px-4"
+          >
             <Text className="text-white font-bold">Order Now</Text>
           </TouchableOpacity>
         </View>
@@ -138,4 +154,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default FoodDetails;

@@ -1,3 +1,10 @@
+import PaymentMethod from "../../components/PaymentMethod";
+import clientImg from "../../assets/images/client.jpg";
+import airtelImg from "../../assets/images/airtel.jpeg";
+import masterCardImg from "../../assets/images/master-card.jpeg";
+import momoImg from "../../assets/images/momo.png";
+import { useState } from "react";
+import { router } from "expo-router";
 import {
   SafeAreaView,
   ScrollView,
@@ -6,18 +13,17 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-import PaymentMethod from "../../components/PaymentMethod";
-import clientImg from "../../assets/images/client.jpg";
-import airtelImg from "../../assets/images/airtel.jpeg";
-import masterCardImg from "../../assets/images/master-card.jpeg";
-import momoImg from "../../assets/images/momo.png"
 
 const Checkout = () => {
+  const [activeMethod, setActiveMethod] = useState("")
   return (
     <SafeAreaView>
-      <ScrollView className="pt-10 px-6 bg-[#f3f4f6]" contentContainerStyle={{
-        paddingBottom: 60
-      }}>
+      <ScrollView
+        className="pt-10 px-6 bg-[#f3f4f6]"
+        contentContainerStyle={{
+          paddingBottom: 60,
+        }}
+      >
         <View className="flex-col w-full items-center">
           <View className="h-[130px] w-[130px] rounded-full overflow-hidden">
             <Image source={clientImg} className="h-full w-full" />
@@ -46,7 +52,7 @@ const Checkout = () => {
           <Text className="text-secondary text-lg font-bold">TOTAL</Text>
           <Text className="text-3xl text-primary font-bold">RWF 45,000</Text>
         </View>
-        <TouchableOpacity className="p-4 mt-2 bg-[#3EB075] rounded-md items-center justify-center">
+        <TouchableOpacity onPress={() => router.push("/order-complete")} className="p-4 mt-2 bg-[#3EB075] rounded-md items-center justify-center">
           <Text className="text-white">Pay for the Order</Text>
         </TouchableOpacity>
       </ScrollView>

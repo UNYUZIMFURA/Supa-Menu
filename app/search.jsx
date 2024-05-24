@@ -1,18 +1,18 @@
 import {
   SafeAreaView,
   ScrollView,
-  Text,
   View,
   TextInput,
-  TouchableWithoutFeedback,
+ TouchableWithoutFeedback
 } from "react-native";
 import { router } from "expo-router";
 import { Fontisto } from "@expo/vector-icons";
-import { FontAwesome } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import CustomButton from "../components/CustomButton";
 
 const search = () => {
   return (
-    <SafeAreaView className="bg-primary h-full pt-24 px-5">
+    <SafeAreaView className="bg-[#1010470e] h-full pt-24 px-5">
       <ScrollView
         contentContainerStyle={{
           height: "100%",
@@ -23,24 +23,25 @@ const search = () => {
           <TextInput
             placeholder="Search for your preferred restaurant"
             className="text flex-1 ml-4 items-center h-[50px]"
-            onFocus={() => router.push("/home")}
+            onFocus={() => router.push("/menu")}
           />
         </View>
-        <View className="w-full h-[450px] justify-between flex-col items-center py-20">
-          <Text className="font-bold text-lg text-white">OR</Text>
-          <TouchableWithoutFeedback onPress={() => router.push("/food")}>
-            <FontAwesome
-              name="qrcode"
-              size={200}
-              color="black"
-              style={{
-                marginTop: 14,
-              }}
-            />
+        <View className="bg-white rounded-md mt-6 w-full h-[370px] flex-col items-center py-20">
+          <TouchableWithoutFeedback onPress={() => router.push("/menu")}>
+            <View className="flex-col items-center justify-center">
+              <MaterialCommunityIcons
+                name="qrcode-scan"
+                size={200}
+                color="black"
+              />
+            </View>
           </TouchableWithoutFeedback>
-          <Text className="font-bold text-lg text-white">
-            Scan, Pay & Enjoy!
-          </Text>
+        </View>
+        <View className="mt-6 w-full">
+          <CustomButton
+            content={"Go Back"}
+            onPress={() => router.back()}
+          ></CustomButton>
         </View>
       </ScrollView>
     </SafeAreaView>

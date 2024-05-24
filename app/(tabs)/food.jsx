@@ -1,3 +1,4 @@
+import TopFood from "../../components/TopFood";
 import { Entypo } from "@expo/vector-icons";
 import { router } from "expo-router";
 import {
@@ -8,7 +9,6 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
-import TopFood from "../../components/TopFood";
 
 const food = () => {
   const foodInfo = [
@@ -30,7 +30,7 @@ const food = () => {
     {
       id: 4,
       name: "Hamburger",
-      image: require("../../assets/images/food.jpg"),
+      image: require("../../assets/images/burger.jpg"),
     },
     {
       id: 5,
@@ -48,6 +48,7 @@ const food = () => {
       <ScrollView
         contentContainerStyle={{
           height: "100%",
+          paddingBottom: 50
         }}
       >
         <View className="w-full flex-row border-b border-[#10104721] pl-4 pb-2 items-center">
@@ -61,7 +62,7 @@ const food = () => {
         </View>
         <View className="px-5 py-3">
           <Text className="text-primary font-bold">Popular Food 🍕</Text>
-          <ScrollView className="py-3">
+          <ScrollView className="py-3" showsVerticalScrollIndicator={false}>
             {foodInfo.map((item, index) => (
               <TopFood key={index} image={item.image} name={item.name} />
             ))}

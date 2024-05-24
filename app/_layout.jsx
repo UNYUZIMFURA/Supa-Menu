@@ -27,6 +27,12 @@ const RootLayout = () => {
           headerShown: false,
         }}
       ></Stack.Screen>
+      <Stack.Screen
+        name="order-complete"
+        options={{
+          headerShown: false,
+        }}
+      ></Stack.Screen>
     </Stack>
   );
 };

@@ -13,7 +13,7 @@ const TopFood = ({ name, image }) => {
           className="w-full h-full"
         />
       </View>
-      <TouchableOpacity className="ml-5" onPress={() => router.push("/home")}>
+      <TouchableOpacity className="ml-5" onPress={() => router.push("/food-details")}>
         <Text className="text-secondary font-bold">{name}</Text>
         <Text className="text-third text-xs mt-3">
           World, African, Pizzeria, Coffee

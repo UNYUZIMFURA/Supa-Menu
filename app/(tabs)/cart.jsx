@@ -1,3 +1,4 @@
+import CartProduct from "../../components/CartProduct";
 import {
   SafeAreaView,
   ScrollView,
@@ -8,7 +9,6 @@ import {
 } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import { router } from "expo-router";
-import CartProduct from "../../components/CartProduct";
 
 const Cart = () => {
   const cartProducts = [
@@ -64,15 +64,15 @@ const Cart = () => {
             <View className="flex-col gap-y-4 mt-4">
               <View className="w-full flex-row justify-between">
                 <Text className="text-third">Total items</Text>
-                <Text className="text-secondary">FRW 50,000</Text>
+                <Text className="text-secondary font-bold">FRW 50,000</Text>
               </View>
               <View className="w-full flex-row justify-between">
-                <Text className="text-third">Shipping Costs</Text>
-                <Text className="text-secondary">Free</Text>
+                <Text className="text-primary font-bold">Shipping Costs</Text>
+                <Text className="text-primary font-bold">Free</Text>
               </View>
               <View className="w-full flex-row justify-between">
                 <Text className="text-third">VAT</Text>
-                <Text className="text-secondary">-FRW 5,000</Text>
+                <Text className="text-secondary font-bold">-FRW 5,000</Text>
               </View>
               <View className="h-[1px] w-full border border-dashed border-third"></View>
               <View className="w-full flex-row justify-between">
@@ -80,7 +80,10 @@ const Cart = () => {
                 <Text className="text-primary font-bold">FRW 45,000</Text>
               </View>
             </View>
-            <TouchableOpacity onPress={() => router.push("/checkout")} className="bg-[#3EB075] py-4 mt-8 items-center justify-center rounded-md">
+            <TouchableOpacity
+              onPress={() => router.push("/checkout")}
+              className="bg-[#3EB075] py-4 mt-8 items-center justify-center rounded-md"
+            >
               <Text className="text-white font-bold">PROCEED TO CHECKOUT</Text>
             </TouchableOpacity>
           </View>

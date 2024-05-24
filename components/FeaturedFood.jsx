@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { View, Text, Image } from "react-native";
 import { Foundation } from "@expo/vector-icons";
 
 const FeaturedFood = ({ name, image }) => {
-  const [liked, setLiked] = useState(false);
   return (
     <View
       className={`h-[100px] py-3 px-2 flex-row items-center justify-between mt-3 w-full rounded-md bg-white`}
@@ -23,7 +21,6 @@ const FeaturedFood = ({ name, image }) => {
           name="heart"
           size={18}
           color={"#3EB075"}
-          onPress={() => setLiked((prevState) => !prevState)}
         />
         <Text className="text-secondary font-bold text-xs">$50.00</Text>
       </View>

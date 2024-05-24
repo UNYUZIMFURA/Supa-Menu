@@ -1,8 +1,8 @@
 import { Tabs } from "expo-router";
 import { View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { Feather } from "@expo/vector-icons";
-import { FontAwesome } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 
 const TabsLayout = () => {
@@ -14,7 +14,7 @@ const TabsLayout = () => {
         }}
       >
         <Tabs.Screen
-          name="home"
+          name="menu"
           options={{
             headerShown: false,
             tabBarIcon: ({ focused }) => (
@@ -22,6 +22,21 @@ const TabsLayout = () => {
                 <AntDesign
                   name="home"
                   size={25}
+                  color={focused ? "#3EB075" : "#484848"}
+                />
+              </View>
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="food-details"
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ focused }) => (
+              <View className="items-center justify-center gap-22">
+                <FontAwesome5
+                  name="hamburger"
+                  size={24}
                   color={focused ? "#3EB075" : "#484848"}
                 />
               </View>
@@ -64,24 +79,9 @@ const TabsLayout = () => {
             headerShown: false,
             tabBarIcon: ({ focused }) => (
               <View className="items-center justify-center gap-22">
-                <Feather
-                  name="clock"
+                <MaterialIcons
+                  name="shopping-cart-checkout"
                   size={24}
-                  color={focused ? "#3EB075" : "#484848"}
-                />
-              </View>
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="notifications"
-          options={{
-            headerShown: false,
-            tabBarIcon: ({ focused }) => (
-              <View className="items-center justify-center gap-22">
-                <FontAwesome
-                  name="bell-o"
-                  size={23}
                   color={focused ? "#3EB075" : "#484848"}
                 />
               </View>
