@@ -31,7 +31,7 @@ const App = () => {
                 restaurants prepared by top chefs. Happy eating 😋
               </Text>
               <TouchableOpacity
-                onPress={() => router.push("/search")}
+                onPress={() => router.push("/signup")}
                 className="flex-row p-4 w-full justify-center bg-primary rounded-md"
               >
                 <Text className="text-white font-bold">Continue</Text>

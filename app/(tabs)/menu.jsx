@@ -76,7 +76,7 @@ const Notifications = () => {
       <StatusBar backgroundColor={"white"}/>
       <ScrollView
         contentContainerStyle={{
-          paddingBottom: 10,
+          paddingBottom: 10
         }}
       >
         <View className="h-[180px] w-full bg-primary pt-10 px-5 rounded-b-2xl flex-col">
