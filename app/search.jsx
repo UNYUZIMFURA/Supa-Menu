@@ -14,9 +14,10 @@ const search = () => {
   return (
     <SafeAreaView className="bg-[#1010470e] h-full pt-24 px-5">
       <ScrollView
+        showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           height: "100%",
-          marginTop: 200
+          marginTop: 50
         }}
       >
         <View className="bg-white flex-row items-center w-full h-[50px] rounded-full border-third pl-6 overflow-hidden">
