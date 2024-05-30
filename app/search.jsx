@@ -16,6 +16,7 @@ const search = () => {
       <ScrollView
         contentContainerStyle={{
           height: "100%",
+          marginTop: 200
         }}
       >
         <View className="bg-white flex-row items-center w-full h-[50px] rounded-full border-third pl-6 overflow-hidden">

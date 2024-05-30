@@ -20,7 +20,7 @@ const Login = () => {
       <ScrollView
         contentContainerStyle={{
           height: "100%",
-          marginTop: 150,
+          marginTop: 200,
         }}
       >
         <View className="h-full bg-white w-full rounded-t-[25px] flex items-center px-5 py-6">
