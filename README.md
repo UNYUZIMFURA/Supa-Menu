@@ -8,7 +8,7 @@
 - Interface for Viewing specific Food details(Ingredients, Price)
 - Listing Trending Food
 - Shopping Cart with associated Product prices
-- Checkout & Payment Screen
+- Checkout & Payment Screens
 - Login and Signup Screens
 
 # Screenshots
