@@ -1,6 +1,6 @@
 # Welcome to Supa Menu 👋
 
-- Supa Menu is a Mobile Application crafted entirely around React Native and TailwindCSS
+- Supa Menu is a Mobile Application crafted entirely around React Native and Native-Wind
 - Supa Menu use Modern UI to display different Restaurant Products(Burgers, Pizzas, Wine,...)
 
 # Features
